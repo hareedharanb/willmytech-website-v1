@@ -6,20 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;700&display=swap');
-    html, body { height: 100%; margin: 0; padding: 0; }
-    body {
-      min-height: 100vh;
-      font-family: 'Inter', Arial, sans-serif;
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(135deg, #0c1929 0%, #1a1a2e 50%, #16213e 100%);
+      font-family: 'Inter', Arial, sans-serif;
       color: #fff;
-      position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+      box-sizing: border-box;
     }
     .stars {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
+      width: 100vw;
+      height: 100vh;
     }
     .star {
       position: absolute;
@@ -47,6 +51,7 @@
       flex-direction: column;
       gap: 1.1rem;
       animation: fadeInUp 1s cubic-bezier(.45,.8,.65,1.1);
+      min-height: 60vh;
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(42px);}
@@ -164,12 +169,10 @@
   <div class="policy-container">
     <div class="policy-logo">WillMyTech.com</div>
     <h1>Privacy Policy</h1>
-
     <h2><span class="section-number">1.</span>Introduction</h2>
     <p>
       WillMyTech (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and protect your information when you use our apps, websites, and services (collectively, “Services”). It also explains your rights and choices regarding your information, in accordance with the laws and regulations of your country, including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), California Privacy Rights Act (CPRA), and the Information Technology Act, 2000 (India) and related rules.
     </p>
-
     <h2><span class="section-number">2.</span>Information We Collect</h2>
     <ul>
       <li>Personal Information (e.g., name, email address, contact details)</li>
@@ -179,7 +182,6 @@
       <li>Information from APIs and Third Parties (e.g., Google Analytics, AdSense, Meta, LinkedIn, OpenAI, Instagram)</li>
       <li>Other Information you provide (e.g., via contact forms, feedback, or account creation)</li>
     </ul>
-
     <h2><span class="section-number">3.</span>How We Use Your Information</h2>
     <ul>
       <li>Provide, operate, and maintain our Services</li>
@@ -190,7 +192,6 @@
       <li>Serve advertisements and measure ad performance (Google AdSense, etc.)</li>
       <li>Integrate with third-party APIs as required by app functionality</li>
     </ul>
-
     <h2><span class="section-number">4.</span>Sharing Your Information</h2>
     <ul>
       <li>Service providers and partners (e.g., Google, Meta, LinkedIn, OpenAI) as necessary for app functionality</li>
@@ -199,13 +200,11 @@
       <li>Other third parties with your consent</li>
     </ul>
     <p>We do not sell your personal information.</p>
-
     <h2><span class="section-number">5.</span>International Data Transfers</h2>
     <p>
       Your data may be processed and stored in countries other than your own.<br>
       We take steps to ensure adequate safeguards are in place for such transfers, in line with applicable data protection laws.
     </p>
-
     <h2><span class="section-number">6.</span>Your Rights and Choices</h2>
     <ul>
       <li>Access, update, or delete your information</li>
@@ -218,39 +217,32 @@
     <p>
       To exercise your rights, contact us at: <a href="mailto:office@willmytech.com">office@willmytech.com</a>
     </p>
-
     <h2><span class="section-number">7.</span>Cookies & Tracking Technologies</h2>
     <p>
       We use cookies and similar technologies for analytics, advertising, and to improve user experience.<br>
       You can control cookies through your browser or device settings.
     </p>
-
     <h2><span class="section-number">8.</span>Data Security</h2>
     <p>
       We implement appropriate security measures to protect your data from unauthorized access, alteration, disclosure, or destruction.
     </p>
-
     <h2><span class="section-number">9.</span>Data Retention</h2>
     <p>
       We retain your personal information only as long as necessary for the purposes described in this policy, or as required by law.
     </p>
-
     <h2><span class="section-number">10.</span>Third-Party Links & Services</h2>
     <p>
       Our Services may contain links to or integrations with third-party sites and services. We are not responsible for the privacy practices of these third parties.
     </p>
-
     <h2><span class="section-number">11.</span>Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.
     </p>
-
     <h2><span class="section-number">12.</span>Contact Us</h2>
     <p>
       If you have questions or requests regarding this Privacy Policy, please contact:<br>
       Email: <a href="mailto:office@willmytech.com">office@willmytech.com</a>
     </p>
-
     <h2><span class="section-number">13.</span>Addendums for Legal Compliance</h2>
     <div class="addendum">
       <h3>A. CCPA/CPRA (California, USA)</h3>
@@ -274,7 +266,6 @@
         <li>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy & Terms</a>.</li>
       </ul>
     </div>
-
     <a href="index.html" class="back-link">&larr; Back to home</a>
   </div>
   <script>
